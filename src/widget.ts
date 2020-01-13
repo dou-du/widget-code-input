@@ -18,7 +18,15 @@ import * as _ from 'underscore';
 import CodeMirror from 'codemirror';
 import 'codemirror/mode/css/css';
 import 'codemirror/mode/javascript/javascript';
-import 'codemirror/theme/midnight.css'; 
+
+// Import different CodeMirror themes 
+import 'codemirror/theme/midnight.css';
+import 'codemirror/theme/monokai.css';
+import 'codemirror/theme/eclipse.css';
+import 'codemirror/theme/material.css';
+import 'codemirror/theme/solarized.css';
+import 'codemirror/theme/idea.css'; 
+
 import 'codemirror/mode/python/python.js'; 
 
 export
@@ -62,7 +70,7 @@ class WidgetCodeView extends DOMWidgetView {
 	private mySignatureCodeMirror: any; 
 	private myDocstringCodeMirror: any;
 	private myBodyCodeMirror: any;
-    private theme: string = "midnight"; 
+    private theme: string = this.model.get('code_theme');   
 
   render() {
         var cssStyles = "<style>\

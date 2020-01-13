@@ -24,6 +24,7 @@ class WidgetCodeInput(DOMWidget):
     function_parameters = Unicode('').tag(sync=True)
     docstring = Unicode('\n').tag(sync=True)
     function_body = Unicode('').tag(sync=True)
+    code_theme = Unicode('').tag(sync=True)  
 
     @validate('function_name')
     def _valid_function_name(self, function_name):
@@ -56,7 +57,7 @@ class WidgetCodeInput(DOMWidget):
             raise TraitError('The docstring cannot contain triple double quotes (""")')
         return docstring['value']
 
-    def __init__(self, function_name, function_parameters='', docstring='\n', function_body=''):
+    def __init__(self, function_name, function_parameters='', docstring='\n', function_body='', code_theme='midnight'):
         """
         Creates a new widget to show a box to enter code.
 
@@ -73,6 +74,7 @@ class WidgetCodeInput(DOMWidget):
         self.function_parameters = function_parameters
         self.docstring = docstring
         self.function_body = function_body
+        self.code_theme = code_theme 
     
     @property
     def full_function_code(self):
