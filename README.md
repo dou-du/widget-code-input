@@ -7,23 +7,26 @@
 
 A widget to allow input of a python function, with syntax highlighting
 
+## Try it live!
+
+[![Binder](https://mybinder.org/badge_logo.svg)](https://mybinder.org/v2/gh/osscar-org/widget-code-input/master?urlpath=%2Flab%2Ftree%2Fexamples%2Fintroduction.ipynb)
+
 ## Installation
 
 You can install using `pip`:
 
 ```bash
-pip install widget_code_input
+$ pip install widget_code_input
+$ jupyter labextension enbale --py --sys-prefix widget_code_input
 ```
 
-Or if you use jupyterlab:
+For a development installation (requires npm),
 
 ```bash
-pip install widget_code_input
-jupyter labextension install @jupyter-widgets/jupyterlab-manager
-```
-
-If you are using Jupyter Notebook 5.2 or earlier, you may also need to enable
-the nbextension:
-```bash
-jupyter nbextension enable --py [--sys-prefix|--user|--system] widget_code_input
+$ git clone https://github.com/osscar-org/widget-code-input.git
+$ cd widget-code-input
+$ pip install -e .
+$ jupyter nbextension install --py --symlink --sys-prefix widget_code_input
+$ jupyter nbextension enable --py --sys-prefix widget_code_input
+$ jupyter labextension install .
 ```

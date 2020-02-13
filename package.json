@@ -1,6 +1,6 @@
 {
   "name": "widget_code_input",
-  "version": "0.2.0",
+  "version": "1.0.0a1",
   "description": "A widget to allow input of a python function, with syntax highlighting",
   "keywords": [
     "jupyter",
@@ -17,7 +17,7 @@
   "bugs": {
     "url": "https://github.com/osscar-org/widget-code-input/issues"
   },
-  "license": "BSD-3-Clause",
+  "license": "MIT License",
   "author": {
     "name": "Giovanni Pizzi, Dou Du",
     "email": "dou.du@epfl.ch"
