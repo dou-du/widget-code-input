@@ -27,7 +27,7 @@ Contents
    :caption: Installation and usage
 
    installing
-   introduction
+   tutorials
 
 .. toctree::
    :maxdepth: 1
@@ -40,6 +40,12 @@ Contents
    :caption: Development
 
    develop-install
+
+.. toctree::
+   :maxdepth: 2
+   :caption: Project Information
+
+   osscar 
 
 
 .. links
